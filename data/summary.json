@@ -1,0 +1,34 @@
+{
+  "status": "PASS_PHASE4_ANALYSIS_COMPLETED",
+  "run_count": 60,
+  "best_final_average_accuracy": {
+    "method": "random_replay",
+    "budget": 256,
+    "n": 6,
+    "mean_final_average_accuracy": 0.6873283221512883,
+    "std_final_average_accuracy": 0.021887587375286992,
+    "mean_average_forgetting": 0.01390508005749431,
+    "std_average_forgetting": 0.018348984419577292,
+    "mean_runtime_seconds": 9.862839857737223,
+    "std_runtime_seconds": 0.8337595128901499
+  },
+  "lowest_average_forgetting": {
+    "method": "random_replay",
+    "budget": 256,
+    "n": 6,
+    "mean_final_average_accuracy": 0.6873283221512883,
+    "std_final_average_accuracy": 0.021887587375286992,
+    "mean_average_forgetting": 0.01390508005749431,
+    "std_average_forgetting": 0.018348984419577292,
+    "mean_runtime_seconds": 9.862839857737223,
+    "std_runtime_seconds": 0.8337595128901499
+  },
+  "figure_paths": [
+    "artifacts/phase4_analysis_2026-07-15/figure_method_budget_accuracy.png",
+    "artifacts/phase4_analysis_2026-07-15/figure_method_budget_accuracy.pdf",
+    "artifacts/phase4_analysis_2026-07-15/figure_forgetting_by_method_budget.png",
+    "artifacts/phase4_analysis_2026-07-15/figure_forgetting_by_method_budget.pdf",
+    "artifacts/phase4_analysis_2026-07-15/figure_accuracy_runtime.png",
+    "artifacts/phase4_analysis_2026-07-15/figure_accuracy_runtime.pdf"
+  ]
+}

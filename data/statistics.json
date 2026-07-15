@@ -1,0 +1,212 @@
+{
+  "pairwise_vs_no_replay": [
+    {
+      "method": "class_balanced_replay",
+      "budget": 16,
+      "matched_pairs": 6,
+      "accuracy": {
+        "n": 6,
+        "mean_delta": 0.009640734866449637,
+        "median_delta": 0.003934972426470673,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 9.0,
+        "p_value": 0.84375,
+        "holm_p_value": 1.0
+      },
+      "forgetting": {
+        "n": 6,
+        "mean_delta": 0.01285631016847172,
+        "median_delta": -0.007264458129822312,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 10.0,
+        "p_value": 1.0,
+        "holm_p_value": 1.0
+      }
+    },
+    {
+      "method": "class_balanced_replay",
+      "budget": 64,
+      "matched_pairs": 6,
+      "accuracy": {
+        "n": 6,
+        "mean_delta": 0.03267061374790594,
+        "median_delta": 0.021101409313725505,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 0.0,
+        "p_value": 0.03125,
+        "holm_p_value": 0.5625
+      },
+      "forgetting": {
+        "n": 6,
+        "mean_delta": -0.006489417304727738,
+        "median_delta": 0.014838606922913573,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 6.0,
+        "p_value": 0.4375,
+        "holm_p_value": 1.0
+      }
+    },
+    {
+      "method": "class_balanced_replay",
+      "budget": 256,
+      "matched_pairs": 6,
+      "accuracy": {
+        "n": 6,
+        "mean_delta": 0.040160502025155774,
+        "median_delta": 0.03050453033198841,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 0.0,
+        "p_value": 0.03125,
+        "holm_p_value": 0.53125
+      },
+      "forgetting": {
+        "n": 6,
+        "mean_delta": 0.00827644457176173,
+        "median_delta": 0.006491706189094189,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 8.0,
+        "p_value": 0.6875,
+        "holm_p_value": 1.0
+      }
+    },
+    {
+      "method": "hard_example_replay",
+      "budget": 16,
+      "matched_pairs": 6,
+      "accuracy": {
+        "n": 6,
+        "mean_delta": -0.09150369425936734,
+        "median_delta": -0.08280222767130307,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 0.0,
+        "p_value": 0.03125,
+        "holm_p_value": 0.5
+      },
+      "forgetting": {
+        "n": 6,
+        "mean_delta": 0.15002386584397095,
+        "median_delta": 0.1819367666967509,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 0.0,
+        "p_value": 0.03125,
+        "holm_p_value": 0.46875
+      }
+    },
+    {
+      "method": "hard_example_replay",
+      "budget": 64,
+      "matched_pairs": 6,
+      "accuracy": {
+        "n": 6,
+        "mean_delta": -0.06880178447262623,
+        "median_delta": -0.03331473115532302,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 0.0,
+        "p_value": 0.03125,
+        "holm_p_value": 0.4375
+      },
+      "forgetting": {
+        "n": 6,
+        "mean_delta": 0.10698076550616235,
+        "median_delta": 0.14192961800394047,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 0.0,
+        "p_value": 0.03125,
+        "holm_p_value": 0.40625
+      }
+    },
+    {
+      "method": "hard_example_replay",
+      "budget": 256,
+      "matched_pairs": 6,
+      "accuracy": {
+        "n": 6,
+        "mean_delta": -0.02465618114912928,
+        "median_delta": -0.04797339950759172,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 7.0,
+        "p_value": 0.5625,
+        "holm_p_value": 1.0
+      },
+      "forgetting": {
+        "n": 6,
+        "mean_delta": 0.06216841899966966,
+        "median_delta": 0.07684678865529365,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 2.0,
+        "p_value": 0.09375,
+        "holm_p_value": 1.0
+      }
+    },
+    {
+      "method": "random_replay",
+      "budget": 16,
+      "matched_pairs": 6,
+      "accuracy": {
+        "n": 6,
+        "mean_delta": 0.017252506236211385,
+        "median_delta": 0.02266330790551785,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 6.0,
+        "p_value": 0.4375,
+        "holm_p_value": 1.0
+      },
+      "forgetting": {
+        "n": 6,
+        "mean_delta": 0.00208787730645809,
+        "median_delta": 0.0033496363346782933,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 10.0,
+        "p_value": 1.0,
+        "holm_p_value": 1.0
+      }
+    },
+    {
+      "method": "random_replay",
+      "budget": 64,
+      "matched_pairs": 6,
+      "accuracy": {
+        "n": 6,
+        "mean_delta": 0.03251891371207031,
+        "median_delta": 0.03820096546064278,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 4.0,
+        "p_value": 0.21875,
+        "holm_p_value": 1.0
+      },
+      "forgetting": {
+        "n": 6,
+        "mean_delta": 0.008663696155608254,
+        "median_delta": 0.007485665746442976,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 10.0,
+        "p_value": 1.0,
+        "holm_p_value": 1.0
+      }
+    },
+    {
+      "method": "random_replay",
+      "budget": 256,
+      "matched_pairs": 6,
+      "accuracy": {
+        "n": 6,
+        "mean_delta": 0.06195131294094056,
+        "median_delta": 0.06814867474516884,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 0.0,
+        "p_value": 0.03125,
+        "holm_p_value": 0.375
+      },
+      "forgetting": {
+        "n": 6,
+        "mean_delta": -0.006944720953965223,
+        "median_delta": 0.007827800193482929,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 8.0,
+        "p_value": 0.6875,
+        "holm_p_value": 1.0
+      }
+    }
+  ],
+  "correction": "Holm correction applied where Wilcoxon p-values are available"
+}

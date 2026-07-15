@@ -1,0 +1,25 @@
+{
+  "hardware": {
+    "cpu": "Intel Core i9-12900K (16C/24T)",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition (95.59 GiB VRAM reported)",
+    "ram": "128 GB DDR5"
+  },
+  "software": {
+    "cuda": "12.8",
+    "datasets": "4.8.4",
+    "evaluate": "0.4.6",
+    "matplotlib": "3.10.8",
+    "numpy": "2.4.4",
+    "pandas": "3.0.1",
+    "peft": "0.18.1",
+    "python": "3.11.15",
+    "scikit_learn": "1.8.0",
+    "scipy": "1.17.1",
+    "sentencepiece": "0.2.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.4.0"
+  },
+  "system": {
+    "os": "Ubuntu 22.04 (WSL2)"
+  }
+}
