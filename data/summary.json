@@ -1,34 +1,71 @@
 {
-  "status": "PASS_PHASE4_ANALYSIS_COMPLETED",
-  "run_count": 60,
-  "best_final_average_accuracy": {
+  "title": "Replay Allocation Strategies for Adapter-Based Continual Text Classification under Limited Memory",
+  "backbones": [
+    "distilbert-base-uncased",
+    "bert-base-uncased"
+  ],
+  "tasks": [
+    "SST-2",
+    "MRPC",
+    "RTE",
+    "AG News"
+  ],
+  "task_orders": {
+    "O1": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "O2": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ]
+  },
+  "seeds": [
+    113,
+    227,
+    349,
+    461,
+    587
+  ],
+  "methods": [
+    "no_replay",
+    "random_replay",
+    "class_balanced_replay",
+    "hard_example_replay"
+  ],
+  "budgets": {
+    "no_replay": [
+      0
+    ],
+    "replay_methods": [
+      16,
+      64,
+      256
+    ]
+  },
+  "train_limit_per_task": 512,
+  "eval_limit_per_task": 512,
+  "epochs": 1,
+  "batch_size": 8,
+  "learning_rate": "2e-4",
+  "max_length": 128,
+  "completed_full_matrix_runs": 200,
+  "failed_runs": 0,
+  "aggregate_rows": 20,
+  "cell_summary_rows": 200,
+  "distilbert_best_accuracy": {
     "method": "random_replay",
     "budget": 256,
-    "n": 6,
-    "mean_final_average_accuracy": 0.6873283221512883,
-    "std_final_average_accuracy": 0.021887587375286992,
-    "mean_average_forgetting": 0.01390508005749431,
-    "std_average_forgetting": 0.018348984419577292,
-    "mean_runtime_seconds": 9.862839857737223,
-    "std_runtime_seconds": 0.8337595128901499
+    "mean_final_average_accuracy": 0.677398803
   },
-  "lowest_average_forgetting": {
-    "method": "random_replay",
+  "bertbase_best_accuracy": {
+    "method": "class_balanced_replay",
     "budget": 256,
-    "n": 6,
-    "mean_final_average_accuracy": 0.6873283221512883,
-    "std_final_average_accuracy": 0.021887587375286992,
-    "mean_average_forgetting": 0.01390508005749431,
-    "std_average_forgetting": 0.018348984419577292,
-    "mean_runtime_seconds": 9.862839857737223,
-    "std_runtime_seconds": 0.8337595128901499
+    "mean_final_average_accuracy": 0.6773867369
   },
-  "figure_paths": [
-    "artifacts/phase4_analysis_2026-07-15/figure_method_budget_accuracy.png",
-    "artifacts/phase4_analysis_2026-07-15/figure_method_budget_accuracy.pdf",
-    "artifacts/phase4_analysis_2026-07-15/figure_forgetting_by_method_budget.png",
-    "artifacts/phase4_analysis_2026-07-15/figure_forgetting_by_method_budget.pdf",
-    "artifacts/phase4_analysis_2026-07-15/figure_accuracy_runtime.png",
-    "artifacts/phase4_analysis_2026-07-15/figure_accuracy_runtime.pdf"
-  ]
+  "holm_supported_main_finding": "low-budget hard-example replay underperforms no replay; positive high-budget replay trends do not survive standard Holm correction"
 }

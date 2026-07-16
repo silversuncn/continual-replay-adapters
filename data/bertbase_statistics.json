@@ -1,0 +1,233 @@
+{
+  "pairwise_vs_no_replay": [
+    {
+      "method": "class_balanced_replay",
+      "budget": 16,
+      "matched_pairs": 10,
+      "accuracy": {
+        "n": 10,
+        "mean_delta": -0.019358476482312214,
+        "median_delta": -0.01679684734904785,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 3.0,
+        "p_value": 0.009765625,
+        "holm_p_value": 0.126953125,
+        "holm_correction_method": "statsmodels.multipletests(method='holm')"
+      },
+      "forgetting": {
+        "n": 10,
+        "mean_delta": 0.01209577073157782,
+        "median_delta": 0.010870280535499396,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 11.0,
+        "p_value": 0.10546875,
+        "holm_p_value": 0.84375,
+        "holm_correction_method": "statsmodels.multipletests(method='holm')"
+      }
+    },
+    {
+      "method": "class_balanced_replay",
+      "budget": 64,
+      "matched_pairs": 10,
+      "accuracy": {
+        "n": 10,
+        "mean_delta": 0.007398962729834724,
+        "median_delta": 0.01366420186079853,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 20.0,
+        "p_value": 0.4921875,
+        "holm_p_value": 1.0,
+        "holm_correction_method": "statsmodels.multipletests(method='holm')"
+      },
+      "forgetting": {
+        "n": 10,
+        "mean_delta": 0.008781089808817625,
+        "median_delta": 0.003750529054883044,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 17.0,
+        "p_value": 0.322265625,
+        "holm_p_value": 1.0,
+        "holm_correction_method": "statsmodels.multipletests(method='holm')"
+      }
+    },
+    {
+      "method": "class_balanced_replay",
+      "budget": 256,
+      "matched_pairs": 10,
+      "accuracy": {
+        "n": 10,
+        "mean_delta": 0.032431141525314996,
+        "median_delta": 0.03836227420232541,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 2.0,
+        "p_value": 0.005859375,
+        "holm_p_value": 0.08203125,
+        "holm_correction_method": "statsmodels.multipletests(method='holm')"
+      },
+      "forgetting": {
+        "n": 10,
+        "mean_delta": 0.0006573460837403461,
+        "median_delta": -0.001203369434416383,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 17.0,
+        "p_value": 0.322265625,
+        "holm_p_value": 1.0,
+        "holm_correction_method": "statsmodels.multipletests(method='holm')"
+      }
+    },
+    {
+      "method": "hard_example_replay",
+      "budget": 16,
+      "matched_pairs": 10,
+      "accuracy": {
+        "n": 10,
+        "mean_delta": -0.10849242308611165,
+        "median_delta": -0.10588424011865571,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 0.0,
+        "p_value": 0.001953125,
+        "holm_p_value": 0.03515625,
+        "holm_correction_method": "statsmodels.multipletests(method='holm')"
+      },
+      "forgetting": {
+        "n": 10,
+        "mean_delta": 0.11422269118236943,
+        "median_delta": 0.12687740747622755,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 0.0,
+        "p_value": 0.001953125,
+        "holm_p_value": 0.03515625,
+        "holm_correction_method": "statsmodels.multipletests(method='holm')"
+      }
+    },
+    {
+      "method": "hard_example_replay",
+      "budget": 64,
+      "matched_pairs": 10,
+      "accuracy": {
+        "n": 10,
+        "mean_delta": -0.1099575226074184,
+        "median_delta": -0.11794326964766055,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 0.0,
+        "p_value": 0.001953125,
+        "holm_p_value": 0.03515625,
+        "holm_correction_method": "statsmodels.multipletests(method='holm')"
+      },
+      "forgetting": {
+        "n": 10,
+        "mean_delta": 0.13119270722729523,
+        "median_delta": 0.15102890114379086,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 1.0,
+        "p_value": 0.00390625,
+        "holm_p_value": 0.05859375,
+        "holm_correction_method": "statsmodels.multipletests(method='holm')"
+      }
+    },
+    {
+      "method": "hard_example_replay",
+      "budget": 256,
+      "matched_pairs": 10,
+      "accuracy": {
+        "n": 10,
+        "mean_delta": -0.006368280403880833,
+        "median_delta": 0.010483028951652873,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 25.0,
+        "p_value": 0.845703125,
+        "holm_p_value": 1.0,
+        "holm_correction_method": "statsmodels.multipletests(method='holm')"
+      },
+      "forgetting": {
+        "n": 10,
+        "mean_delta": 0.042795000634128506,
+        "median_delta": 0.016682971511408427,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 10.0,
+        "p_value": 0.083984375,
+        "holm_p_value": 0.755859375,
+        "holm_correction_method": "statsmodels.multipletests(method='holm')"
+      }
+    },
+    {
+      "method": "random_replay",
+      "budget": 16,
+      "matched_pairs": 10,
+      "accuracy": {
+        "n": 10,
+        "mean_delta": -0.04433736152403198,
+        "median_delta": -0.058529357845349406,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 7.0,
+        "p_value": 0.037109375,
+        "holm_p_value": 0.37109375,
+        "holm_correction_method": "statsmodels.multipletests(method='holm')"
+      },
+      "forgetting": {
+        "n": 10,
+        "mean_delta": 0.03963833107701563,
+        "median_delta": 0.04485210243092426,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 5.0,
+        "p_value": 0.01953125,
+        "holm_p_value": 0.234375,
+        "holm_correction_method": "statsmodels.multipletests(method='holm')"
+      }
+    },
+    {
+      "method": "random_replay",
+      "budget": 64,
+      "matched_pairs": 10,
+      "accuracy": {
+        "n": 10,
+        "mean_delta": 0.00853606320122815,
+        "median_delta": 0.013045027916401275,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 21.0,
+        "p_value": 0.556640625,
+        "holm_p_value": 1.0,
+        "holm_correction_method": "statsmodels.multipletests(method='holm')"
+      },
+      "forgetting": {
+        "n": 10,
+        "mean_delta": 0.01204589763101389,
+        "median_delta": 0.018910025276656972,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 16.0,
+        "p_value": 0.275390625,
+        "holm_p_value": 1.0,
+        "holm_correction_method": "statsmodels.multipletests(method='holm')"
+      }
+    },
+    {
+      "method": "random_replay",
+      "budget": 256,
+      "matched_pairs": 10,
+      "accuracy": {
+        "n": 10,
+        "mean_delta": 0.024640983494593705,
+        "median_delta": 0.03176451509078371,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 5.0,
+        "p_value": 0.01953125,
+        "holm_p_value": 0.234375,
+        "holm_correction_method": "statsmodels.multipletests(method='holm')"
+      },
+      "forgetting": {
+        "n": 10,
+        "mean_delta": 0.004556024331363109,
+        "median_delta": 0.010352839052287602,
+        "test": "wilcoxon_signed_rank",
+        "statistic": 13.0,
+        "p_value": 0.16015625,
+        "holm_p_value": 1.0,
+        "holm_correction_method": "statsmodels.multipletests(method='holm')"
+      }
+    }
+  ],
+  "correction": "Standard monotone Holm adjustment applied where Wilcoxon p-values are available",
+  "holm_implementations": [
+    "statsmodels.multipletests(method='holm')"
+  ]
+}

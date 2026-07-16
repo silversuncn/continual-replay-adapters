@@ -128,6 +128,30 @@ def _wilcoxon_or_descriptive(a: list[float], b: list[float]) -> dict:
     return result
 
 
+def _standard_holm_adjustment(p_values: list[float]) -> tuple[list[float], str]:
+    """Return standard monotone Holm-adjusted p-values in input order."""
+    if not p_values:
+        return [], "none"
+    try:
+        from statsmodels.stats.multitest import multipletests
+
+        _, adjusted, _, _ = multipletests(p_values, method="holm")
+        return [float(value) for value in adjusted], "statsmodels.multipletests(method='holm')"
+    except Exception as exc:
+        m = len(p_values)
+        indexed = sorted(enumerate(float(value) for value in p_values), key=lambda item: item[1])
+        adjusted: list[float | None] = [None] * m
+        running_max = 0.0
+        for rank, (original_index, raw_p) in enumerate(indexed, start=1):
+            current = min(1.0, raw_p * (m - rank + 1))
+            running_max = max(running_max, current)
+            adjusted[original_index] = running_max
+        return [float(value) for value in adjusted if value is not None], (
+            "fallback_standard_monotone_holm"
+            f" (statsmodels unavailable: {type(exc).__name__})"
+        )
+
+
 def _pairwise_statistics(rows: list[dict]) -> list[dict]:
     baseline = {
         (row["order_name"], row["seed"]): row
@@ -168,13 +192,12 @@ def _pairwise_statistics(rows: list[dict]) -> list[dict]:
         for metric in ["accuracy", "forgetting"]
         if comparison[metric].get("p_value") is not None
     ]
-    for rank, (comparison, metric) in enumerate(
-        sorted(p_entries, key=lambda item: item[0][item[1]]["p_value"]),
-        start=1,
-    ):
-        m = len(p_entries)
-        raw = comparison[metric]["p_value"]
-        comparison[metric]["holm_p_value"] = min(1.0, raw * (m - rank + 1))
+    adjusted_p_values, holm_method = _standard_holm_adjustment(
+        [comparison[metric]["p_value"] for comparison, metric in p_entries]
+    )
+    for (comparison, metric), adjusted_p_value in zip(p_entries, adjusted_p_values):
+        comparison[metric]["holm_p_value"] = adjusted_p_value
+        comparison[metric]["holm_correction_method"] = holm_method
     return comparisons
 
 
@@ -296,7 +319,15 @@ def analyze_matrix(matrix_dir: str | Path, output_dir: str | Path) -> dict:
     best_forgetting = min(aggregated, key=lambda row: row["mean_average_forgetting"]) if aggregated else {}
     statistics = {
         "pairwise_vs_no_replay": comparisons,
-        "correction": "Holm correction applied where Wilcoxon p-values are available",
+        "correction": "Standard monotone Holm adjustment applied where Wilcoxon p-values are available",
+        "holm_implementations": sorted(
+            {
+                item[metric].get("holm_correction_method")
+                for item in comparisons
+                for metric in ["accuracy", "forgetting"]
+                if item[metric].get("holm_correction_method")
+            }
+        ),
     }
     (output_dir / "statistics.json").write_text(json.dumps(statistics, indent=2, ensure_ascii=False))
     summary = {

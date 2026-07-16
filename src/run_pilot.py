@@ -42,7 +42,7 @@ def parse_args():
     parser.add_argument("--learning-rate", type=float, default=2e-4)
     parser.add_argument("--max-length", type=int, default=128)
     parser.add_argument("--methods", default="no_replay,random_replay,class_balanced_replay,hard_example_replay")
-    parser.add_argument("--sequence", dest="task_order", default=",".join(TASK_SEQUENCE))
+    parser.add_argument("--task-order", default=",".join(TASK_SEQUENCE))
     parser.add_argument("--order-name", default="O1")
     return parser.parse_args()
 

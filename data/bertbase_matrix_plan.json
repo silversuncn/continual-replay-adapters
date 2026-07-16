@@ -1,0 +1,1302 @@
+[
+  {
+    "cell_id": "cell_001_O1_seed113_no_replay_b0",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 113,
+    "method": "no_replay",
+    "budget": 0
+  },
+  {
+    "cell_id": "cell_002_O1_seed113_random_replay_b16",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 113,
+    "method": "random_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_003_O1_seed113_random_replay_b64",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 113,
+    "method": "random_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_004_O1_seed113_random_replay_b256",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 113,
+    "method": "random_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_005_O1_seed113_class_balanced_replay_b16",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 113,
+    "method": "class_balanced_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_006_O1_seed113_class_balanced_replay_b64",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 113,
+    "method": "class_balanced_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_007_O1_seed113_class_balanced_replay_b256",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 113,
+    "method": "class_balanced_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_008_O1_seed113_hard_example_replay_b16",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 113,
+    "method": "hard_example_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_009_O1_seed113_hard_example_replay_b64",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 113,
+    "method": "hard_example_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_010_O1_seed113_hard_example_replay_b256",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 113,
+    "method": "hard_example_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_011_O1_seed227_no_replay_b0",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 227,
+    "method": "no_replay",
+    "budget": 0
+  },
+  {
+    "cell_id": "cell_012_O1_seed227_random_replay_b16",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 227,
+    "method": "random_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_013_O1_seed227_random_replay_b64",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 227,
+    "method": "random_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_014_O1_seed227_random_replay_b256",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 227,
+    "method": "random_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_015_O1_seed227_class_balanced_replay_b16",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 227,
+    "method": "class_balanced_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_016_O1_seed227_class_balanced_replay_b64",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 227,
+    "method": "class_balanced_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_017_O1_seed227_class_balanced_replay_b256",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 227,
+    "method": "class_balanced_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_018_O1_seed227_hard_example_replay_b16",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 227,
+    "method": "hard_example_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_019_O1_seed227_hard_example_replay_b64",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 227,
+    "method": "hard_example_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_020_O1_seed227_hard_example_replay_b256",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 227,
+    "method": "hard_example_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_021_O1_seed349_no_replay_b0",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 349,
+    "method": "no_replay",
+    "budget": 0
+  },
+  {
+    "cell_id": "cell_022_O1_seed349_random_replay_b16",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 349,
+    "method": "random_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_023_O1_seed349_random_replay_b64",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 349,
+    "method": "random_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_024_O1_seed349_random_replay_b256",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 349,
+    "method": "random_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_025_O1_seed349_class_balanced_replay_b16",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 349,
+    "method": "class_balanced_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_026_O1_seed349_class_balanced_replay_b64",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 349,
+    "method": "class_balanced_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_027_O1_seed349_class_balanced_replay_b256",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 349,
+    "method": "class_balanced_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_028_O1_seed349_hard_example_replay_b16",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 349,
+    "method": "hard_example_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_029_O1_seed349_hard_example_replay_b64",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 349,
+    "method": "hard_example_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_030_O1_seed349_hard_example_replay_b256",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 349,
+    "method": "hard_example_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_031_O1_seed461_no_replay_b0",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 461,
+    "method": "no_replay",
+    "budget": 0
+  },
+  {
+    "cell_id": "cell_032_O1_seed461_random_replay_b16",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 461,
+    "method": "random_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_033_O1_seed461_random_replay_b64",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 461,
+    "method": "random_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_034_O1_seed461_random_replay_b256",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 461,
+    "method": "random_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_035_O1_seed461_class_balanced_replay_b16",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 461,
+    "method": "class_balanced_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_036_O1_seed461_class_balanced_replay_b64",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 461,
+    "method": "class_balanced_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_037_O1_seed461_class_balanced_replay_b256",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 461,
+    "method": "class_balanced_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_038_O1_seed461_hard_example_replay_b16",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 461,
+    "method": "hard_example_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_039_O1_seed461_hard_example_replay_b64",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 461,
+    "method": "hard_example_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_040_O1_seed461_hard_example_replay_b256",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 461,
+    "method": "hard_example_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_041_O1_seed587_no_replay_b0",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 587,
+    "method": "no_replay",
+    "budget": 0
+  },
+  {
+    "cell_id": "cell_042_O1_seed587_random_replay_b16",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 587,
+    "method": "random_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_043_O1_seed587_random_replay_b64",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 587,
+    "method": "random_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_044_O1_seed587_random_replay_b256",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 587,
+    "method": "random_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_045_O1_seed587_class_balanced_replay_b16",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 587,
+    "method": "class_balanced_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_046_O1_seed587_class_balanced_replay_b64",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 587,
+    "method": "class_balanced_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_047_O1_seed587_class_balanced_replay_b256",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 587,
+    "method": "class_balanced_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_048_O1_seed587_hard_example_replay_b16",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 587,
+    "method": "hard_example_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_049_O1_seed587_hard_example_replay_b64",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 587,
+    "method": "hard_example_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_050_O1_seed587_hard_example_replay_b256",
+    "order_name": "O1",
+    "task_sequence": [
+      "sst2",
+      "mrpc",
+      "rte",
+      "ag_news"
+    ],
+    "seed": 587,
+    "method": "hard_example_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_051_O2_seed113_no_replay_b0",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 113,
+    "method": "no_replay",
+    "budget": 0
+  },
+  {
+    "cell_id": "cell_052_O2_seed113_random_replay_b16",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 113,
+    "method": "random_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_053_O2_seed113_random_replay_b64",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 113,
+    "method": "random_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_054_O2_seed113_random_replay_b256",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 113,
+    "method": "random_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_055_O2_seed113_class_balanced_replay_b16",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 113,
+    "method": "class_balanced_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_056_O2_seed113_class_balanced_replay_b64",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 113,
+    "method": "class_balanced_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_057_O2_seed113_class_balanced_replay_b256",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 113,
+    "method": "class_balanced_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_058_O2_seed113_hard_example_replay_b16",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 113,
+    "method": "hard_example_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_059_O2_seed113_hard_example_replay_b64",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 113,
+    "method": "hard_example_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_060_O2_seed113_hard_example_replay_b256",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 113,
+    "method": "hard_example_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_061_O2_seed227_no_replay_b0",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 227,
+    "method": "no_replay",
+    "budget": 0
+  },
+  {
+    "cell_id": "cell_062_O2_seed227_random_replay_b16",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 227,
+    "method": "random_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_063_O2_seed227_random_replay_b64",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 227,
+    "method": "random_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_064_O2_seed227_random_replay_b256",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 227,
+    "method": "random_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_065_O2_seed227_class_balanced_replay_b16",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 227,
+    "method": "class_balanced_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_066_O2_seed227_class_balanced_replay_b64",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 227,
+    "method": "class_balanced_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_067_O2_seed227_class_balanced_replay_b256",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 227,
+    "method": "class_balanced_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_068_O2_seed227_hard_example_replay_b16",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 227,
+    "method": "hard_example_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_069_O2_seed227_hard_example_replay_b64",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 227,
+    "method": "hard_example_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_070_O2_seed227_hard_example_replay_b256",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 227,
+    "method": "hard_example_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_071_O2_seed349_no_replay_b0",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 349,
+    "method": "no_replay",
+    "budget": 0
+  },
+  {
+    "cell_id": "cell_072_O2_seed349_random_replay_b16",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 349,
+    "method": "random_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_073_O2_seed349_random_replay_b64",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 349,
+    "method": "random_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_074_O2_seed349_random_replay_b256",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 349,
+    "method": "random_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_075_O2_seed349_class_balanced_replay_b16",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 349,
+    "method": "class_balanced_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_076_O2_seed349_class_balanced_replay_b64",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 349,
+    "method": "class_balanced_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_077_O2_seed349_class_balanced_replay_b256",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 349,
+    "method": "class_balanced_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_078_O2_seed349_hard_example_replay_b16",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 349,
+    "method": "hard_example_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_079_O2_seed349_hard_example_replay_b64",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 349,
+    "method": "hard_example_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_080_O2_seed349_hard_example_replay_b256",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 349,
+    "method": "hard_example_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_081_O2_seed461_no_replay_b0",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 461,
+    "method": "no_replay",
+    "budget": 0
+  },
+  {
+    "cell_id": "cell_082_O2_seed461_random_replay_b16",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 461,
+    "method": "random_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_083_O2_seed461_random_replay_b64",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 461,
+    "method": "random_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_084_O2_seed461_random_replay_b256",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 461,
+    "method": "random_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_085_O2_seed461_class_balanced_replay_b16",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 461,
+    "method": "class_balanced_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_086_O2_seed461_class_balanced_replay_b64",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 461,
+    "method": "class_balanced_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_087_O2_seed461_class_balanced_replay_b256",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 461,
+    "method": "class_balanced_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_088_O2_seed461_hard_example_replay_b16",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 461,
+    "method": "hard_example_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_089_O2_seed461_hard_example_replay_b64",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 461,
+    "method": "hard_example_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_090_O2_seed461_hard_example_replay_b256",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 461,
+    "method": "hard_example_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_091_O2_seed587_no_replay_b0",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 587,
+    "method": "no_replay",
+    "budget": 0
+  },
+  {
+    "cell_id": "cell_092_O2_seed587_random_replay_b16",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 587,
+    "method": "random_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_093_O2_seed587_random_replay_b64",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 587,
+    "method": "random_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_094_O2_seed587_random_replay_b256",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 587,
+    "method": "random_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_095_O2_seed587_class_balanced_replay_b16",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 587,
+    "method": "class_balanced_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_096_O2_seed587_class_balanced_replay_b64",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 587,
+    "method": "class_balanced_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_097_O2_seed587_class_balanced_replay_b256",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 587,
+    "method": "class_balanced_replay",
+    "budget": 256
+  },
+  {
+    "cell_id": "cell_098_O2_seed587_hard_example_replay_b16",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 587,
+    "method": "hard_example_replay",
+    "budget": 16
+  },
+  {
+    "cell_id": "cell_099_O2_seed587_hard_example_replay_b64",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 587,
+    "method": "hard_example_replay",
+    "budget": 64
+  },
+  {
+    "cell_id": "cell_100_O2_seed587_hard_example_replay_b256",
+    "order_name": "O2",
+    "task_sequence": [
+      "ag_news",
+      "rte",
+      "mrpc",
+      "sst2"
+    ],
+    "seed": 587,
+    "method": "hard_example_replay",
+    "budget": 256
+  }
+]

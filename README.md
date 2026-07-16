@@ -5,14 +5,9 @@
 
 ## Overview
 
-This package contains analysis-level data, figures, and verification code for a
-controlled study of replay allocation in adapter-based continual text
-classification. The evaluated conditions are no replay, random replay,
-class-balanced replay, and hard-example replay under three replay budgets.
+This package contains analysis-level data, figures, and verification code for a controlled study of replay allocation in adapter-based continual text classification. The evaluated allocation strategies are no replay, random replay, class-balanced replay, and hard-example replay.
 
-The package is designed for reproducibility from cleaned CSV/JSON summaries. It
-does not include raw execution folders, model checkpoints, caches, datasets, or
-private process records.
+The experiment covers two encoder backbones, four text classification tasks, two task orders, five seeds, and ten method-budget settings per backbone. The full matrix contains 200 completed runs with zero failed cells. The package is designed for reproducibility from cleaned CSV/JSON summaries and does not include raw execution folders, model checkpoints, model caches, datasets, or private process records.
 
 ## Repository Structure
 
@@ -33,37 +28,45 @@ private process records.
 │   ├── run_pilot.py
 │   └── verify_public_data.py
 ├── data/
-│   ├── results.csv
-│   ├── results_aggregated.csv
-│   ├── statistics.json
-│   ├── summary.json
-│   └── table_pairwise.tex
+│   ├── aggregate_results.csv
+│   ├── full_matrix_cells.csv
+│   ├── distilbert_results_aggregated.csv
+│   ├── bertbase_results_aggregated.csv
+│   ├── distilbert_statistics.json
+│   ├── bertbase_statistics.json
+│   ├── distilbert_matrix_plan.json
+│   ├── bertbase_matrix_plan.json
+│   └── summary.json
 └── figures/
-    ├── figure_method_budget_accuracy.png
-    ├── figure_forgetting_by_method_budget.png
-    └── figure_accuracy_runtime.png
+    ├── figure_method_budget_accuracy_distilbert.png
+    ├── figure_method_budget_accuracy_bertbase.png
+    ├── figure_stepwise_seen_accuracy_distilbert.png
+    ├── figure_stepwise_seen_accuracy_bertbase.png
+    ├── figure_stepwise_forgetting_distilbert.png
+    └── figure_stepwise_forgetting_bertbase.png
 ```
 
 ## Experimental Setup
 
 | Dimension | Levels |
 |---|---|
-| Backbone | DistilBERT base uncased |
-| Adaptation | LoRA on query and value projections |
+| Backbones | DistilBERT base uncased; BERT base uncased |
+| Adaptation | Adapter-based classification heads with fixed training recipe |
 | Tasks | SST-2, MRPC, RTE, AG News |
 | Task orders | O1: SST-2, MRPC, RTE, AG News; O2: AG News, RTE, MRPC, SST-2 |
 | Replay methods | no_replay, random_replay, class_balanced_replay, hard_example_replay |
-| Replay budgets | 0, 16, 64, and 256 examples per previous task |
-| Seeds | 113, 227, 349 |
+| Replay budgets | 0 for no replay; 16, 64, and 256 examples per previous task otherwise |
+| Seeds | 113, 227, 349, 461, 587 |
 | Training cap | 512 training examples per task |
 | Evaluation cap | 512 evaluation examples per task |
-| Row-level data | 60 completed condition rows |
-| Aggregated data | 10 method-budget summary rows |
+| Epochs | 1 |
+| Batch size | 8 |
+| Learning rate | 2e-4 |
+| Maximum length | 128 tokens |
+| Cell summary data | 200 completed run cells |
+| Aggregated data | 20 backbone x method-budget summary rows |
 
-The row-level table records final average accuracy, average forgetting,
-wall-clock seconds, memory fields, final task scores, order, seed, method, and
-budget. The public table omits local result paths while retaining the fields
-needed to recompute the reported replay comparisons.
+The row-level cell summary records backbone, task order, seed, method, budget, pass status, runtime, and task sequence. The aggregate table records mean final average accuracy, average forgetting, and runtime summaries for each backbone and method-budget setting.
 
 ## Hardware & Environment
 
@@ -93,18 +96,23 @@ needed to recompute the reported replay comparisons.
 
 ## Key Results
 
-- The full data table contains 60 completed condition rows with zero failed cells.
-- Each replay method-budget cell contains six matched runs: two task orders by three seeds.
-- Random replay with budget 256 has the highest mean final average accuracy, 0.6873, and the lowest mean average forgetting, 0.0139.
-- The matched descriptive final-accuracy delta for random replay at budget 256 versus no replay is 0.0620.
-- Holm-corrected pairwise tests do not cross conventional significance thresholds; the results should be read as bounded empirical trends.
-- Class-balanced replay at budget 64 provides a moderate-budget tradeoff, while the tested hard-example replay rule underperforms simpler allocation strategies in this controlled setup.
+- The full matrix contains 200 completed runs: 100 runs for DistilBERT and 100 runs for BERT-base, with zero failed cells.
+- At budget 256, both backbones show positive descriptive final-accuracy trends. DistilBERT reaches its best mean final average accuracy under random replay, while BERT-base reaches its best mean final average accuracy under class-balanced replay.
+- The positive random-replay accuracy deltas versus no replay do not survive standard Holm correction.
+- The main corrected finding is contrastive: low-budget hard-example replay underperforms no replay for accuracy on both backbones, with additional corrected forgetting penalties.
+- Stepwise curves provide descriptive context and should not be interpreted as independent significance tests.
 
-![Accuracy by method and budget](figures/figure_method_budget_accuracy.png)
+![DistilBERT accuracy by method and budget](figures/figure_method_budget_accuracy_distilbert.png)
 
-![Forgetting by method and budget](figures/figure_forgetting_by_method_budget.png)
+![BERT-base accuracy by method and budget](figures/figure_method_budget_accuracy_bertbase.png)
 
-![Accuracy-runtime view](figures/figure_accuracy_runtime.png)
+![DistilBERT seen-task dynamics](figures/figure_stepwise_seen_accuracy_distilbert.png)
+
+![BERT-base seen-task dynamics](figures/figure_stepwise_seen_accuracy_bertbase.png)
+
+![DistilBERT forgetting dynamics](figures/figure_stepwise_forgetting_distilbert.png)
+
+![BERT-base forgetting dynamics](figures/figure_stepwise_forgetting_bertbase.png)
 
 ## Requirements
 
@@ -131,7 +139,7 @@ PASS: public data checks completed
 ## Citation
 
 ```bibtex
-@article{sun2026continual_replay_adapters,
+@article{sun2026replay_allocation,
   title={Replay Allocation Strategies for Adapter-Based Continual Text Classification under Limited Memory},
   author={Sun, Yaowen and Zhao, Shaolei and Yang, Yi},
   year={2026}

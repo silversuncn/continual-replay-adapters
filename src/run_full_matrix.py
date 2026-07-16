@@ -18,7 +18,7 @@ TASK_ORDERS = {
     "O1": ["sst2", "mrpc", "rte", "ag_news"],
     "O2": ["ag_news", "rte", "mrpc", "sst2"],
 }
-SEEDS = [113, 227, 349]
+DEFAULT_SEEDS = [113, 227, 349]
 REPLAY_METHODS = ["random_replay", "class_balanced_replay", "hard_example_replay"]
 REPLAY_BUDGETS = [16, 64, 256]
 
@@ -27,11 +27,23 @@ def _cell_id(index: int, order_name: str, seed: int, method: str, budget: int) -
     return f"cell_{index:03d}_{order_name}_seed{seed}_{method}_b{budget}"
 
 
-def build_core_matrix_plan() -> list[dict]:
+def _parse_seeds(raw: str | None) -> list[int]:
+    if not raw:
+        return list(DEFAULT_SEEDS)
+    seeds = [int(item.strip()) for item in raw.split(",") if item.strip()]
+    if not seeds:
+        raise ValueError("--seeds must contain at least one integer seed")
+    if len(set(seeds)) != len(seeds):
+        raise ValueError(f"--seeds contains duplicate values: {raw}")
+    return seeds
+
+
+def build_core_matrix_plan(seeds: list[int] | None = None) -> list[dict]:
+    active_seeds = seeds or DEFAULT_SEEDS
     cells: list[dict] = []
     index = 1
     for order_name in ["O1", "O2"]:
-        for seed in SEEDS:
+        for seed in active_seeds:
             cells.append(
                 {
                     "cell_id": _cell_id(index, order_name, seed, "no_replay", 0),
@@ -59,29 +71,31 @@ def build_core_matrix_plan() -> list[dict]:
     return cells
 
 
-def build_launch_smoke_plan() -> list[dict]:
+def build_launch_smoke_plan(seeds: list[int] | None = None) -> list[dict]:
+    active_seeds = seeds or DEFAULT_SEEDS
+    smoke_seed = next((seed for seed in active_seeds if seed not in DEFAULT_SEEDS), active_seeds[0])
     return [
         {
-            "cell_id": "smoke_001_O1_seed113_no_replay_b0",
+            "cell_id": f"smoke_001_O1_seed{smoke_seed}_no_replay_b0",
             "order_name": "O1",
             "task_sequence": TASK_ORDERS["O1"],
-            "seed": 113,
+            "seed": smoke_seed,
             "method": "no_replay",
             "budget": 0,
         },
         {
-            "cell_id": "smoke_002_O1_seed113_class_balanced_replay_b64",
+            "cell_id": f"smoke_002_O1_seed{smoke_seed}_class_balanced_replay_b64",
             "order_name": "O1",
             "task_sequence": TASK_ORDERS["O1"],
-            "seed": 113,
+            "seed": smoke_seed,
             "method": "class_balanced_replay",
             "budget": 64,
         },
         {
-            "cell_id": "smoke_003_O2_seed113_hard_example_replay_b64",
+            "cell_id": f"smoke_003_O2_seed{smoke_seed}_hard_example_replay_b64",
             "order_name": "O2",
             "task_sequence": TASK_ORDERS["O2"],
-            "seed": 113,
+            "seed": smoke_seed,
             "method": "hard_example_replay",
             "budget": 64,
         },
@@ -99,6 +113,7 @@ def parse_args():
     parser.add_argument("--batch-size", type=int, default=8)
     parser.add_argument("--learning-rate", type=float, default=2e-4)
     parser.add_argument("--max-length", type=int, default=128)
+    parser.add_argument("--seeds", default=None, help="Comma-separated integer seeds. Default keeps the original 3-seed matrix.")
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--stop-on-failure", action="store_true")
     return parser.parse_args()
@@ -185,7 +200,8 @@ def run_matrix(args) -> dict:
     os.environ.setdefault("HF_HUB_OFFLINE", "1")
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-    cells = build_core_matrix_plan() if args.plan == "core" else build_launch_smoke_plan()
+    seeds = _parse_seeds(args.seeds)
+    cells = build_core_matrix_plan(seeds) if args.plan == "core" else build_launch_smoke_plan(seeds)
     (output_dir / "matrix_plan.json").write_text(json.dumps(cells, indent=2, ensure_ascii=False))
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     start = time.time()
@@ -207,6 +223,7 @@ def run_matrix(args) -> dict:
         "plan": args.plan,
         "device": str(device),
         "model_name": args.model_name,
+        "seeds": seeds,
         "train_limit": args.train_limit,
         "eval_limit": args.eval_limit,
         "epochs": args.epochs,
